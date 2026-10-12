@@ -1,4 +1,38 @@
 <!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
-<title>Hello, World</title>
-<h1>Hello, World</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$TEST — pump.fun leaderboard</title>
+<style>
+  :root { --bg:#0b0f0c; --panel:#121a14; --line:#1f2b22; --text:#e6f2e9; --muted:#7f9686; --accent:#53ff8a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  main { max-width:880px; margin:0 auto; padding:40px 16px; }
+  h1 { margin:0; font-size:28px; }
+  h1 span { color:var(--accent); }
+  .sub { color:var(--muted); margin:4px 0 28px; }
+  table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  th, td { padding:10px 12px; text-align:left; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:normal; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
+  td.num, th.num { text-align:right; }
+  .empty td { text-align:center; color:var(--muted); padding:40px 12px; }
+  footer { color:var(--muted); font-size:12px; margin-top:24px; }
+</style>
+</head>
+<body>
+<main>
+  <h1><span>$TEST</span> leaderboard</h1>
+  <p class="sub">top pump.fun coins, ranked. built in public, paid for by trading fees.</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>coin</th><th class="num">market cap</th><th class="num">24h vol</th><th class="num">age</th></tr>
+    </thead>
+    <tbody id="rows">
+      <tr class="empty"><td colspan="5">live data coming soon — the agent is wiring it up.</td></tr>
+    </tbody>
+  </table>
+  <footer>not financial advice. rankings are informational only.</footer>
+</main>
+</body>
+</html>
